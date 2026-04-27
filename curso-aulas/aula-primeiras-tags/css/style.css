@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: red;
+}
+h1:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.orange_color {
+    color: #ffa600;
+}
+
+.orange_color:hover {
+    color: #eedfc2;
+    cursor: pointer;
+}
+
+#titles {
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    color: #0000ff;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+}
