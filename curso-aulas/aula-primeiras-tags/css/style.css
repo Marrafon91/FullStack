@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+:root {
+    --main-color: #205520;
+    --secudary-color: #552055;
+    --dark-gray: #666;
+    --light-gray: #ddd;
+    --color-white: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +15,7 @@
 }
 
 h1 {
-    color: red;
+    color: var(--main-color);
 }
 h1:hover {
     color: aqua;
@@ -25,17 +33,17 @@ h1:hover {
 
 #titles {
     background-color: black;
-    color: white;
+    color: var(--color-white);
 }
 
 h2 {
-    color: #0000ff;
+    color: var(--secudary-color);
 }
 
 .card img {
     width: 200px;
     height: 200px;
-    border: 5px solid #ff0000;
+    border: 5px solid var(--main-color);
     margin: 20px;
     padding: 10px;
 }
