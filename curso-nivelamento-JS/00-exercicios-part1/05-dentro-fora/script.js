@@ -1,19 +1,16 @@
 const dados = document.getElementById("dados").innerHTML.split('\n').map(x => Number(x));
 
-let cont = 0;
-let soma = 0;
+let contFora = 0;
+let contDentro = 0;
 
 for (let i=0; i<dados.length; i++) {
-    if (dados[i] > 0) {
-        soma += dados[i];
-        cont += + 1;
+    if (dados[i] >= 10 && dados[i] <= 20) {
+        contDentro += + 1;
+    }
+    else {
+        contFora += + 1;
     }
 }
 
-if (cont === 0) {
-    console.log("IMPOSSIVEL CALCULAR");
-}
-else {
-    const media = soma / cont;
-    console.log(media.toFixed(2));
-}
+console.log(`${contDentro} dentro`);
+console.log(`${contFora} fora`);
