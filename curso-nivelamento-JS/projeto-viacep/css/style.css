@@ -141,12 +141,12 @@ body {
   margin-bottom: 10px;
 }
 
-.adrress-line {
+.address-line {
   color: var(--color-text);
   font-size: 14px;
 }
 
-.adrress-cep {
+.address-cep {
   color: #8f8f8f;
   font-size: 12px;
 }
