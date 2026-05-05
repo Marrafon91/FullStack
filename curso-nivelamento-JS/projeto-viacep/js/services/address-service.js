@@ -6,6 +6,20 @@ export async function findByCep(cep) {
   const result = await requestService.getJson(url);
 
   const address = new Address(result.cep,result.logradouro,null,result.localidade);
-  
+
   return address;
+}
+
+export function getErrors(address) {
+    const errors = {};
+
+        if (!address.cep || address.cep == "") {
+            errors.cep = "CEP é obrigatório";
+         }
+
+          if (!address.number || address.number == "") {
+            errors.number = "Número é obrigatório";
+         }
+
+    return errors;
 }
