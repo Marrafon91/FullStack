@@ -15,35 +15,53 @@
     </header>
 
     <main>
-      <section id="form-section">
-        <div>
+      <section id="form-section" class="form-container">
+        <div class="card-form">
           <div>
             <form name="newAddress">
-              <div>
+              <div class="form-control">
                 <label for="cep">CEP:</label>
-                <input type="text" name="cep" id="cep" placeholder="CEP" />
+                <input
+                  type="text"
+                  name="cep"
+                  id="cep"
+                  class="form-input"
+                  placeholder="CEP"
+                />
+                <div class="error-message">Campo obrigatório</div>
               </div>
-              <div>
+              <div class="form-control">
                 <label for="street">Logradouro:</label>
                 <input
                   type="text"
                   name="street"
                   id="street"
                   placeholder="Logradouro"
+                  class="form-input"
+                  disabled
                 />
               </div>
-              <div>
+              <div class="form-control">
                 <label for="number">Numero:</label>
                 <input
                   type="text"
                   name="number"
                   id="number"
                   placeholder="Numero"
+                  class="form-input"
                 />
+                <div class="error-message">Campo obrigatório</div>
               </div>
-              <div>
+              <div class="form-control">
                 <label for="city">Cidade:</label>
-                <input type="text" name="city" id="city" placeholder="Cidade" />
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="Cidade"
+                  class="form-input"
+                  disabled
+                />
               </div>
               <div>
                 <button type="submit">Salvar</button>
