@@ -1,8 +1,7 @@
-import Address from "../models/address.js";
-import * as requestService from "../services/request-service.js";
+import Address from '../models/address.js';
+import * as addressService from '../services/address-service.js';
 
 function State() {
-
   this.address = new Address();
 
   this.btnSave = null;
@@ -31,24 +30,45 @@ export function init() {
   state.errorCep = document.querySelector('[data-error="cep"]');
   state.errorNumber = document.querySelector('[data-error="number"]');
 
-  state.inputNumber.addEventListener("change", handleInputNumberChange);
-  state.btnClear.addEventListener("click", handleBtnClearClick);
-  state.btnSave.addEventListener("click", handleBtnSaveClick);
+  state.inputNumber.addEventListener('change', handleInputNumberChange);
+  state.btnClear.addEventListener('click', handleBtnClearClick);
+  state.btnSave.addEventListener('click', handleBtnSaveClick);
+  state.inputCep.addEventListener('change', handleInputCepChange);
+}
 
+async function handleInputCepChange(event) {
+  const cep = event.target.value.trim();
 
+  try {
+    const address = await addressService.findByCep(cep);
+
+    state.inputCity.value = address.city;
+    state.inputStreet.value = address.street;
+    state.address = address;
+
+    setFormError('cep', '');
+    state.inputNumber.focus();
+  } catch (error) {
+    setFormError('cep', 'CEP inválido');
+    state.inputCep.focus();
+    state.inputCity.value = '';
+    state.inputStreet.value = '';
+  }
 }
 
 async function handleBtnSaveClick(event) {
   event.preventDefault();
-  const result = await requestService.getJson("https://viacep.com.br/ws/01001000/json/");
-  console.log(result);
+  const result = await requestService.getJson(
+    'https://viacep.com.br/ws/01001000/json/',
+  );
+  console.log(event.target);
 }
 
-function handleInputNumberChange(event)  {
-  if (event.target.value.trim() === "") {
-    setFormError("number", "Campo obrigatório");
+function handleInputNumberChange(event) {
+  if (event.target.value.trim() === '') {
+    setFormError('number', 'Campo obrigatório');
   } else {
-    setFormError("number", "");
+    setFormError('number', '');
   }
 }
 
@@ -58,13 +78,13 @@ function handleBtnClearClick(event) {
 }
 
 function clearForm() {
-  state.inputCep.value = "";
-  state.inputCity.value = "";
-  state.inputNumber.value = "";
-  state.inputStreet.value = "";
+  state.inputCep.value = '';
+  state.inputCity.value = '';
+  state.inputNumber.value = '';
+  state.inputStreet.value = '';
 
-  setFormError("cep", "");
-  setFormError("number", "");
+  setFormError('cep', '');
+  setFormError('number', '');
 
   state.inputCep.focus();
 }

@@ -7,7 +7,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.wordWrap": "on",
@@ -50,7 +50,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.tree.indent": 8,
+  "workbench.tree.indent": 16,
   "breadcrumbs.enabled": true,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
