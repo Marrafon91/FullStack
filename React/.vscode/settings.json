@@ -40,7 +40,7 @@
   // =========================
   // 📁 FILES
   // =========================
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
 
