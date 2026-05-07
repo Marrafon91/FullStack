@@ -1,10 +1,12 @@
+@import url('style.css');
+
 .category-container {
   display: flex;
 }
 
 .category {
-  background-color: #636363;
-  color: #fff;
+  background-color: var(--dsc-color-bg-tertiary);
+  color: var(--dsc-color-font-tertiary);
   height: 30px;
   display: flex;
   align-items: center;
@@ -37,18 +39,17 @@
 
 .product-details-bottom h3 {
   font-size: 20px;
-  color: #0CAF1D;
+  color: var(--dsc-color-font-secondary);
 }
 
 .product-details-bottom h4 {
   font-size: 14px;
-  color: #636363;
-
+  color: var(--dsc-color-font-primary);
 }
 
 .product-details-bottom p {
   font-size: 12px;
   font-weight: 400;
-  color: #636363;
+  color: var(--dsc-color-font-primary);
   margin: 10px 0;
 }
