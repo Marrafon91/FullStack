@@ -49,29 +49,29 @@ nav {
   align-items: center;
 }
 
-.container {
+.dsc-container {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.card {
+.dsc-card {
   background-color: var(--dsc-color-card-bg);
   border-radius: 4px;
   border: 1px solid var(--dsc-color-card-border);
 }
 
-.line-bottom {
+.dsc-line-bottom {
   border-bottom: 1px solid var(--dsc-color-card-border);
 }
 
-.btn-page-container {
+.dsc-btn-page-container {
   width: 220px;
   display: grid;
   gap: 20px;
 }
 
-.btn {
+.dsc-btn {
   border-radius: 4px;
   height: 42px;
   font-size: 16px;
@@ -81,18 +81,18 @@ nav {
   justify-content: center;
 }
 
-.btn-blue {
+.dsc-btn-blue {
   background-color: var(--dsc-color-btn-primary);
   color: var(--dsc-color-btn-inverse);
 }
 
-.btn-white {
+.dsc-btn-white {
   background-color: var(--dsc-color-btn-inverse);
   color: var(--dsc-color-btn-primary);
   border: 1px solid var(--dsc-color-btn-primary);
 }
 
-.mb20 {
+.dsc-mb20 {
   margin-bottom: 20px;
 }
 
