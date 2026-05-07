@@ -17,13 +17,29 @@ html, body {
 }
 
 header {
-    background-color: #ffe500;
-    padding: 20px;
+    background-color: #ffe500;    
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+nav {
+    color: #636363;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
     width: 100%;
-    max-width: 960px;
-    border: 1px solid red;
-   
+    max-width: 960px;    
+    margin: 0 auto;   
+}
+
+.card {    
+    background-color: #fff;
+}
+
+#product-details {   
+    padding: 20px 0;
 }
