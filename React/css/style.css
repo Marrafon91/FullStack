@@ -64,6 +64,10 @@ main {
   font-size: 16px;
 }
 
+.dsc-txt-left {
+  text-align: left;
+}
+
 /* ------------------------------------------- */
 /* Header styles */
 
@@ -297,10 +301,22 @@ input {
 }
 
 .dsc-table thead {
+  height: 55px;
+  font-size: 14px;
+  color: var(--dsc-color-font-primary);
   background-color: var(--dsc-color-card-bg);
 }
 
 .dsc-table tbody {
+  text-align: center;
+  color: var(--dsc-color-font-primary);
   background-color: var(--dsc-color-card-bg);
+  font-size: 12px;
+}
+
+
+.dsc-table tbody tr {
+  height: 70px;
+  border-top: 1px solid var(--dsc-color-card-border);
 }
 
