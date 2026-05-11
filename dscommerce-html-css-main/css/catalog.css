@@ -1,12 +1,12 @@
-@import url('style.css');
+@import url("styles.css");
 
 #catalog-section {
-  margin-top: 20px 0;
+  padding: 20px 0;
 }
 
 .dsc-catalog-cards {
   display: grid;
-  gap: 20px;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 }
 
@@ -17,8 +17,8 @@
 }
 
 .dsc-catalog-card-top img {
-  height: 150px;
   width: 150px;
+  height: 150px;
 }
 
 .dsc-catalog-card-bottom {
@@ -35,5 +35,3 @@
   color: var(--dsc-color-font-primary);
   font-size: 12px;
 }
-
-

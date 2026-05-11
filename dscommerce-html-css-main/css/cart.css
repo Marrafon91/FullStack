@@ -1,7 +1,7 @@
-@import url('style.css');
+@import url("styles.css");
 
 #cart-container-section {
-  margin-top: 20px 0;
+  padding: 20px 0;
 }
 
 .dsc-cart-total-container {
@@ -10,9 +10,8 @@
 
 .dsc-cart-total-container h3 {
   text-align: left;
-  color: var(--dsc-color-font-secondary);
   font-size: 16px;
-  font-weight: 700;
+  color: var(--dsc-color-font-secondary);
 }
 
 .dsc-cart-item-container {
@@ -26,13 +25,13 @@
   height: 78px;
 }
 
-.dsc-cart-item-quantity-container {
+.dsc-cart-item-left {
   display: flex;
-  font-size: 16px;
-  font-weight: 700;
 }
 
-.dsc-cart-item-left {
+.dsc-cart-item-quantity-container {
+  font-size: 16px;
+  font-weight: 700;
   display: flex;
 }
 
@@ -61,7 +60,7 @@
   margin: 0 5px;
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
   .dsc-cart-item-container {
     flex-direction: row;
     justify-content: space-between;
@@ -75,4 +74,3 @@
     text-align: right;
   }
 }
-

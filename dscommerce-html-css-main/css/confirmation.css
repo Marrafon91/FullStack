@@ -1,7 +1,7 @@
-@import url('style.css');
+@import url("styles.css");
 
 #confirmation-section {
-  margin-top: 20px 0;
+  padding: 20px 0;
 }
 
 .dsc-confirmation-message {
@@ -14,7 +14,6 @@
 @media (min-width: 576px) {
   .dsc-confirmation-message {
     font-size: 24px;
-    font-weight: 700;
     text-align: left;
   }
 }

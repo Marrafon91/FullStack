@@ -1,9 +1,11 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DSCommerce</title>
+
     <link rel="stylesheet" href="css/product-form.css" />
   </head>
   <body>
@@ -11,13 +13,13 @@
       <nav class="dsc-container">
         <h1>DSC Admin</h1>
         <div class="dsc-navbar-right">
-          <div class="menu-item-container">
+          <div class="dsc-menu-items-container">
             <div class="dsc-menu-item">
-              <img src="img/home.svg" alt="Inicio" />
-              <p>Inicio</p>
+              <img src="images/home.svg" alt="Início" />
+              <p>Início</p>
             </div>
             <div class="dsc-menu-item">
-              <img src="img/products.svg" alt="Cadastro de Produtos" />
+              <img src="images/products.svg" alt="Cadastro de produtos" />
               <p class="dsc-menu-item-active">Produtos</p>
             </div>
           </div>
@@ -32,28 +34,16 @@
       <section id="product-form-section" class="dsc-container">
         <div class="dsc-product-form-container">
           <form class="dsc-card dsc-form">
-            <h2>Dados do Produto</h2>
+            <h2>Dados do produto</h2>
             <div class="dsc-form-controls-container">
               <div>
-                <input
-                  class="dsc-form-control"
-                  type="text"
-                  placeholder="Nome"
-                />
+                <input class="dsc-form-control" type="text" placeholder="Nome">
               </div>
               <div>
-                <input
-                  class="dsc-form-control"
-                  type="text"
-                  placeholder="Preço"
-                />
+                <input class="dsc-form-control" type="text" placeholder="Preço">
               </div>
               <div>
-                <input
-                  class="dsc-form-control"
-                  type="text"
-                  placeholder="Imagem"
-                />
+                <input class="dsc-form-control" type="text" placeholder="Imagem">
               </div>
               <div>
                 <select class="dsc-form-control dsc-select" required>
@@ -63,16 +53,12 @@
                 </select>
               </div>
               <div>
-                <textarea
-                  class="dsc-form-control dsc-textarea"
-                  placeholder="Descrição"
-                ></textarea>
+                <textarea class="dsc-form-control dsc-textarea" placeholder="Descrição"></textarea>
               </div>
             </div>
+
             <div class="dsc-product-form-buttons">
-              <button type="reset" class="dsc-btn dsc-btn-white">
-                Cancelar
-              </button>
+              <button type="reset" class="dsc-btn dsc-btn-white">Cancelar</button>
               <button type="submit" class="dsc-btn dsc-btn-blue">Salvar</button>
             </div>
           </form>

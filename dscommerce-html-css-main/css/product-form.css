@@ -1,4 +1,4 @@
-@import url('style.css');
+@import url("styles.css");
 
 #product-form-section {
   padding: 20px 0;
@@ -13,13 +13,12 @@
 .dsc-product-form-buttons {
   width: 100%;
   display: grid;
-  gap: 20px;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
 }
 
-@media(min-width: 576px) {
+@media (min-width: 576px) {
   #product-form-section {
-  padding: 40px 0;
-}
-
+    padding: 40px 0;
+  }
 }
