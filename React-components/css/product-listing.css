@@ -1,0 +1,18 @@
+@import url('style.css');
+
+#product-listing-section {
+  margin-top: 20px 0;
+}
+
+.dsc-product-listing-image {
+  width: 69px;
+  height: 69px;
+  display: block;
+}
+
+.product-listing-btn {
+  height: 20px;
+  margin: 5px;
+  width: auto;
+  cursor: pointer;
+}
