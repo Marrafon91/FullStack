@@ -9,10 +9,22 @@
   <body>
     <header class="dsc-header-admin">
       <nav class="dsc-container">
-        <h1>DSCommerce</h1>
-        <div class="dsc-logged-user">
-          <p>Maria Silva</p>
-          <a href="#">Sair</a>
+        <h1>DSC Admin</h1>
+        <div class="dsc-navbar-right">
+          <div class="menu-item-container">
+            <div class="dsc-menu-item">
+              <img src="img/home.svg" alt="Inicio" />
+              <p>Inicio</p>
+            </div>
+            <div class="dsc-menu-item">
+              <img src="img/products.svg" alt="Cadastro de Produtos" />
+              <p class="dsc-menu-item-active">Produtos</p>
+            </div>
+          </div>
+          <div class="dsc-logged-user">
+            <p>Maria Silva</p>
+            <a href="#">Sair</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -51,11 +63,16 @@
                 </select>
               </div>
               <div>
-                <textarea class="dsc-form-control dsc-textarea" placeholder="Descrição"></textarea>
+                <textarea
+                  class="dsc-form-control dsc-textarea"
+                  placeholder="Descrição"
+                ></textarea>
               </div>
             </div>
             <div class="dsc-product-form-buttons">
-              <button type="reset" class="dsc-btn dsc-btn-white">Cancelar</button>
+              <button type="reset" class="dsc-btn dsc-btn-white">
+                Cancelar
+              </button>
               <button type="submit" class="dsc-btn dsc-btn-blue">Salvar</button>
             </div>
           </form>
