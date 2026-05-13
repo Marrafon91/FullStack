@@ -2,7 +2,14 @@
 
 
 :root {
-  --color-bg-primary: #FFF;
+  --ct-color-bg-primary: #FFF;
+  --ct-color-header-bg: #f78b00;
+  --ct-color-header-text: #00285f;
+
+  --ct-color-font-primary: #000;
+  --ct-color-font-secundary: #585858;
+  --ct-color-font-tertiary: #00285f;
+  --ct-color-font-quaternary: #fff;
 }
 
 * {
@@ -20,5 +27,11 @@ a:hover {
 
 html,
 body {
-  background-color: var(--color-bg-primary);
+  background-color: var(--ct-color-bg-primary);
+}
+
+.ct-container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
 }

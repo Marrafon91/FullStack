@@ -1,26 +1,14 @@
-.header-container {
+.ct-header {
+  padding: 0 20px;
   width: 100%;
   height: 70px;
-  background-color: #f78b00;
+  background-color: var(--ct-color-header-bg);
   display: flex;
-  flex-wrap: nowrap;
+  align-items: center;
 }
 
-.title-container {
-  max-width: 1280px;
-  margin-left: 20px;
-  display: flex;
-
+.ct-header h1 {
+  color: var(--ct-color-header-text);
+  font-size: 24px;
 }
 
-.title-container h1 {
-  color: #00285f;
-  margin: 20px 0;
-}
-
-@media (min-width: 576px) {
-  .title-container {
-    margin-left: 150px;
-
-  }
-}
