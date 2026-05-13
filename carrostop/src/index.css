@@ -3,6 +3,8 @@
 
 :root {
   --ct-color-bg-primary: #FFF;
+  --ct-color-bg-secundary: #00285f;
+
   --ct-color-header-bg: #f78b00;
   --ct-color-header-text: #00285f;
 
@@ -10,6 +12,7 @@
   --ct-color-font-secundary: #585858;
   --ct-color-font-tertiary: #00285f;
   --ct-color-font-quaternary: #fff;
+  --ct-color-font-placeholder: #A7A7A7;
 }
 
 * {
