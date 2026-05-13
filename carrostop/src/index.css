@@ -4,6 +4,7 @@
 :root {
   --ct-color-bg-primary: #FFF;
   --ct-color-bg-secundary: #00285f;
+  --ct-color-bg-tertiary: #EDEDED;
 
   --ct-color-header-bg: #f78b00;
   --ct-color-header-text: #00285f;
