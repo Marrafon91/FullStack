@@ -1,0 +1,14 @@
+.ds-carrs-subtitle {
+  color: var(--ds-carrs-color-font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.ds-carrs-section {
+  background-color: yellowgreen;
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 75rem;
+}
