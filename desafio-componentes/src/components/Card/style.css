@@ -31,4 +31,9 @@
   .ds-carrs-card p {
     font-size: 2rem;
   }
+
+  .ds-carrs-card img {
+    width: 39.1rem;
+    height: 29.2rem;
+  }
 }
