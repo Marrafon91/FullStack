@@ -1,0 +1,19 @@
+.ds-carrs-comments {
+  min-height: 7.4rem;
+  max-width: 96rem;
+  width: 100%;
+  border-radius: 1.2rem;
+  background-color: var(--ds-carrs-color-bg-primary);
+  border: 1px solid var(--ds-carrs-color-border-primary);
+  margin: 2.5rem 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.ds-carrs-comments p {
+  font-size: 1.6rem;
+  color: var(--ds-carrs-color-font-secundary);
+  padding: 2.5rem 2rem;
+}
+

@@ -20,13 +20,31 @@
   flex-direction: column;
 }
 
+.ds-carrs-comments-container {
+  max-width: 120rem;
+}
+
 .ds-carrs-section-comments {
   background-color: var(--ds-carrs-color-bg-secundary);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.ds-carrs-section-comments h2 {
+  font-size: 2rem;
+  color: var(--ds-carrs-color-font-primary);
+  margin-top: 2.5rem;
+  text-align: center;
+  transition: font-size 0.3s ease;
 }
 
 .ds-carrs-main-content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ds-carrs-card-content {
@@ -35,6 +53,10 @@
 
 @media (min-width: 576px) {
   .ds-carrs-subtitle {
+    font-size: 3.2rem;
+  }
+
+  .ds-carrs-section-comments h2 {
     font-size: 3.2rem;
   }
 }
