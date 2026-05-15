@@ -6,6 +6,7 @@
   align-items: center;
   margin-bottom: 2.5rem;
   border-radius: 0.5rem;
+
 }
 
 .ds-carrs-card img {
@@ -20,6 +21,7 @@
   font-size: 1.6rem;
   color: var(--ds-carrs-color-font-primary);
   transition: font-size 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
