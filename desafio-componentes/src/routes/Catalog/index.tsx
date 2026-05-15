@@ -6,12 +6,17 @@ export default function Catalog() {
   return (
     <>
     <Header />
-    <main>
-      <section className="ds-carrs-section">
+    <main className="ds-carrs-main-content">
+      <section className="ds-carrs-section-card">
         <h2 className="ds-carrs-subtitle">Venha nos visitar</h2>
-        <div>
+        <div className="ds-carrs-card-content">
+            <Card />
             <Card />
         </div>
+        </section>
+
+        <section className="ds-carrs-section-comments">
+
         </section>
     </main>
     </>

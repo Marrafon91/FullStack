@@ -2,13 +2,39 @@
   color: var(--ds-carrs-color-font-primary);
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+
+  transition: font-size 0.3s ease;
+}
+
+.ds-carrs-section-card {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 74.6rem;
+  padding: 0 2rem;
+  margin-bottom: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-carrs-section-comments {
+  background-color: var(--ds-carrs-color-bg-secundary);
+}
+
+.ds-carrs-main-content {
   display: flex;
   justify-content: center;
 }
 
-.ds-carrs-section {
-  background-color: yellowgreen;
-  margin-top: 2.5rem;
+.ds-carrs-card-content {
   width: 100%;
-  max-width: 75rem;
+}
+
+@media (min-width: 576px) {
+  .ds-carrs-subtitle {
+    font-size: 3.2rem;
+  }
 }
