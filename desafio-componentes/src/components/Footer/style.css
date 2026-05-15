@@ -1,0 +1,25 @@
+.ds-carrs-footer-all-content {
+  width: 100%;
+  max-width: 96rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.4rem 0;
+  margin: 0 auto;
+
+}
+
+.ds-carrs-footer-content p {
+  font-size: 1.6rem;
+  color: var(--ds-carrs-color-footer-text);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+  .ds-carrs-footer-all-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+  }
+}

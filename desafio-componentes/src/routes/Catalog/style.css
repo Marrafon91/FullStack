@@ -51,6 +51,11 @@
   width: 100%;
 }
 
+.ds-carrs-footer-container {
+  background-color: var(--ds-carrs-color-footer-bg);
+  min-height: 12rem;
+}
+
 @media (min-width: 576px) {
   .ds-carrs-subtitle {
     font-size: 3.2rem;

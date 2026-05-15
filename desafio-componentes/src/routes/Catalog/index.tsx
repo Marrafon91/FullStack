@@ -1,5 +1,6 @@
 import Card from '../../components/Card';
 import Comments from '../../components/Comments';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import './style.css'
 
@@ -26,9 +27,13 @@ export default function Catalog() {
             <Comments />
             <Comments />
           </div>
-
         </section>
     </main>
+    <footer>
+      <div className="ds-carrs-footer-container">
+        <Footer />
+      </div>
+    </footer>
     </>
   );
 }

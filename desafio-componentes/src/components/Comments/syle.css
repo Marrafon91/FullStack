@@ -15,5 +15,7 @@
   font-size: 1.6rem;
   color: var(--ds-carrs-color-font-secundary);
   padding: 2.5rem 2rem;
+
+  transition: font-size 0.3s ease;
 }
 

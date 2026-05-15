@@ -13,6 +13,9 @@
 
    --ds-carrs-color-border-primary: #3C9AF0;
 
+   --ds-carrs-color-footer-bg: #3C9AF0;
+   --ds-carrs-color-footer-text: #FFF;
+
 }
 
 * {
