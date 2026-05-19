@@ -44,25 +44,6 @@ const products: ProductDTO[] = [
     ],
   },
   {
-    id: 3,
-    name: 'Jogo Ps5',
-    price: 399.99,
-    imgUrl:
-      'https://images2.kabum.com.br/produtos/fotos/396722/jogo-god-of-war-ragnar-k-edicao-standard-ps5-_1666892140_gg.jpg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    categories: [
-      {
-        id: 4,
-        name: 'Jogos',
-      },
-      {
-        id: 5,
-        name: 'On-line',
-      },
-    ],
-  },
-  {
     id: 7,
     name: 'PC Gamer X',
     price: 1350.0,
