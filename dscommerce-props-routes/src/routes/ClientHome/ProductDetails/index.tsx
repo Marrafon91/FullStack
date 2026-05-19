@@ -1,7 +1,6 @@
 import './style.css';
 import ButtonInverse from '../../../components/ButtonInverse';
 import ButtonPrimary from '../../../components/ButtonPrimary';
-import HeaderClient from '../../../components/HeaderClient';
 import ProductDetailsCard from '../../../components/ProductDetailsCard';
 import type { ProductDTO } from '../../../models/product';
 
