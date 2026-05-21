@@ -18,7 +18,7 @@ export default function Header() {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/products"
                 className={({ isActive }) => (isActive ? 'menu-active' : '')}
               >
                 Produtos
@@ -26,7 +26,7 @@ export default function Header() {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/about"
                 className={({ isActive }) => (isActive ? 'menu-active' : '')}
               >
                 Sobre nós

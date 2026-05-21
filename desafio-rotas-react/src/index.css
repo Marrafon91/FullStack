@@ -33,6 +33,11 @@ html {
   margin: 0 auto;
 }
 
+.main-content h1 {
+  color: var(--color-font-secondary);
+  font-size: 2.4rem;
+}
+
 .mt20 {
   margin-top: 2rem;
 }
