@@ -1,0 +1,32 @@
+.main-header {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-bg-primary);
+  min-height: 7rem;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items {
+  font-size: 2rem;
+  display: flex;
+  color: var(--color-font-primary);
+}
+
+.nav-items li {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.home-img img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.menu-active {
+  font-weight: bold;
+}

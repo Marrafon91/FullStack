@@ -1,8 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './routes/Home';
+import HomeBody from './routes/Home/HomeBody/Index';
 
-function App() {
+
+export default function App() {
   return (
-    <h1>Ola Mundo</h1>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} >
+        <Route index element ={<HomeBody />} />
 
-export default App
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
