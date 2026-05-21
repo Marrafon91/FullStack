@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './style.css';
-import homeImg from '../../assets/Home.png'
+import homeImg from '../../assets/Home.png';
 
 export default function Header() {
   return (
@@ -33,9 +33,9 @@ export default function Header() {
               </NavLink>
             </li>
           </ul>
-          <div className="home-img  mt20 mb20">
+          <div className="home-img mt20 mb20">
             <Link to="/">
-            <img src={homeImg} alt="Home" />
+              <img src={homeImg} alt="Home" />
             </Link>
           </div>
         </nav>

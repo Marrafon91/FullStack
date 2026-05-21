@@ -1,1 +1,9 @@
-
+.nav-list-products ul{
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-font-secondary);
+  min-height: 6rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
