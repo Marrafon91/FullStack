@@ -12,7 +12,7 @@ export default function Promotion() {
             <Card title="Pagina de Promoções" />
           </div>
           <div className="dflex">
-            <Link to="/subscription">
+            <Link to="/inscricao">
               <Button text="Quero me inscrever!" />
             </Link>
           </div>

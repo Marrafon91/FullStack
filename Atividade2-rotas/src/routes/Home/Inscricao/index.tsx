@@ -3,11 +3,14 @@ import Button from '../../../components/Button';
 import Card from '../../../components/Card';
 import './style.css';
 
-export default function Subscription() {
+export default function Inscricao() {
   return (
     <main>
       <section>
         <div className="container">
+          <Link to="/">
+            <h2 className="section-title">Faça sua inscrição!</h2>
+          </Link>
           <div className="mt30 mb30">
             <Card title="Pagina de Inscrição" />
           </div>

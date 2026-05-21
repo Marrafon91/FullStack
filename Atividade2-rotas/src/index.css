@@ -13,10 +13,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   color: unset;
 }
@@ -43,4 +44,12 @@ html {
 
 .mt30 {
   margin-top: 3rem;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.7rem;
+  color: var(--color-font-primary);
 }
