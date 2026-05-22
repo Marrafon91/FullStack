@@ -10,6 +10,7 @@ import Computadores from './routes/Home/Product/Computadores';
 import About from './routes/Home/About/Index';
 import Eletronicos from './routes/Home/Product/Eletronicos';
 import Livros from './routes/Home/Product/Livros';
+import { computadores, eletronicos, livros } from './services/data';
 
 export default function App() {
   return (
@@ -18,9 +19,9 @@ export default function App() {
         <Route path="/" element={<Home />}>
           <Route index element={<HomeBody />} />
           <Route path="products" element={<Product />}>
-            <Route path="computadores" element={<Computadores />} />
-            <Route path="eletronicos" element={<Eletronicos />} />
-            <Route path="livros" element={<Livros />} />
+            <Route path="computadores" element={<Computadores computadores={computadores} />} />
+            <Route path="eletronicos" element={<Eletronicos eletronicos={eletronicos}/>} />
+            <Route path="livros" element={<Livros livros={livros} />} />
           </Route>
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound />} />

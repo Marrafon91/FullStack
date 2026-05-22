@@ -1,12 +1,17 @@
 import './style.css';
+import type { Computador } from '../../../../services/data';
 
-export default function Computadores() {
+type Props = {
+  computadores: Computador[];
+};
+
+export default function Computadores({ computadores }: Props) {
   return (
     <div className="sub-content">
       <ul>
-        <li>Computador 1</li>
-        <li>Computador 2</li>
-        <li>Computador 3</li>
+        {computadores.map((computador) => (
+          <li key={computador.id}>{computador.nome}</li>
+        ))}
       </ul>
     </div>
   );

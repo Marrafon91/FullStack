@@ -1,12 +1,17 @@
 import './style.css';
+import type { Livros } from '../../../../services/data';
 
-export default function Livros() {
+type Props = {
+  livros: Livros[];
+};
+
+export default function Livros({ livros }: Props) {
   return (
     <div className="sub-content">
       <ul>
-        <li>Livro 1</li>
-        <li>Livro 2</li>
-        <li>Livro 3</li>
+        {livros.map((livro) => (
+          <li key={livro.id}>{livro.nome}</li>
+        ))}
       </ul>
     </div>
   );

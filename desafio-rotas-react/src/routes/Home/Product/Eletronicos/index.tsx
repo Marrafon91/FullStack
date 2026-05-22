@@ -1,12 +1,17 @@
 import './style.css';
+import type { Eletronico } from '../../../../services/data';
 
-export default function Eletronicos() {
+type Props = {
+  eletronicos: Eletronico[];
+};
+
+export default function Eletronico({ eletronicos }: Props) {
   return (
     <div className="sub-content">
       <ul>
-        <li>Eletrônico 1</li>
-        <li>Eletrônico 2</li>
-        <li>Eletrônico 3</li>
+        {eletronicos.map((eletronico) => (
+          <li key={eletronico.id}>{eletronico.nome}</li>
+        ))}
       </ul>
     </div>
   );
