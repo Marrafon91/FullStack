@@ -1,18 +1,17 @@
-import { Link } from 'react-router-dom';
 import Button from '../../../components/Button';
 import './style.css';
 
 export default function SearchUser() {
-  return(
+  return (
     <main>
       <section className="container">
-        <div className="ml-40 main-content">
-          <h1>Encontre um perfil Github</h1>
+        <div className="ml-40 main-content-search">
+          <h2 className="ml-40">Encontre um perfil Github</h2>
           <form>
-            <input type="text" placeholder="Usuário Github"/>
+            <input className="ml-40" type="text" placeholder="Usuário Github" />
           </form>
+          <Button text="Encontrar" to="/" />
         </div>
-        <Button text="Encontrar" to="/"/>
       </section>
     </main>
   );
