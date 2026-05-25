@@ -1,54 +1,72 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../../../components/Button';
 import './style.css';
 import type { UserDTO } from '../../../models/UserDTO';
 import { findUser } from '../../../service/github-service';
 
 export default function SearchUser() {
-  const [userName, setUserName] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [search, setSearch] = useState('');
+
   const [user, setUser] = useState<UserDTO>();
   const [error, setError] = useState('');
 
-  function handleSearch(event) {
-    event.preventDefault();
+  useEffect(() => {
+    if (search === '') {
+      return;
+    }
 
-    setError('');
-
-    findUser(userName)
+    findUser(search)
       .then((response) => {
         setUser(response.data);
+
+        setError('');
       })
       .catch(() => {
         setUser(undefined);
+
         setError('Erro ao buscar usuário');
       });
+  }, [search]);
+
+  function handleSubmit(event: any) {
+    event.preventDefault();
+    setSearch(inputValue);
   }
 
   return (
-    <main>
-      <section className="container">
-        <div className="ml-40 main-content-search">
-          <h2 className="ml-40">Encontre um perfil Github</h2>
-          <form onSubmit={handleSearch}>
-            <input
-              className="ml-40"
-              type="text"
-              placeholder="Usuário Github"
-              value={userName}
-              onChange={(event) => setUserName(event.target.value)}
-            />
-            <div className="ml-40">
-              <Button text="Encontrar" />
-            </div>
-          </form>
+    <main className="container">
+      <div className="ml-40">
+        <section>
+          <div className="main-content-search">
+            <h2 className="ml-40">Encontre um perfil Github</h2>
 
+            <form onSubmit={handleSubmit}>
+              <input
+                className="ml-40"
+                type="text"
+                placeholder="Usuário Github"
+                value={inputValue}
+                onChange={(event) => setInputValue(event.target.value)}
+              />
+
+              <div className="ml-40">
+                <Button text="Encontrar" />
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section className="container">
           {user && (
             <div className="user-card">
               <div>
-                <img src={user.avatar_url} alt={user.name} width="200" />
+                <img src={user.avatar_url} alt={user.name} />
               </div>
+
               <div>
                 <h3>Informações</h3>
+
                 <p>
                   Perfil:
                   <a href={user.html_url} target="_blank" rel="noreferrer">
@@ -61,10 +79,9 @@ export default function SearchUser() {
               </div>
             </div>
           )}
-
-          {error && <h2>{error}</h2>}
-        </div>
-      </section>
+          <div className="user-notfound">{error && <h2>{error}</h2>}</div>
+        </section>
+      </div>
     </main>
   );
 }

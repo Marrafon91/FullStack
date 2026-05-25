@@ -11,8 +11,6 @@ export default function App() {
       <Route path="/" element={<Home />} >
       <Route index element={<HomeBody />} />
       <Route path="/search" element={<SearchUser />} />
-
-
       </Route>
     </Routes>
 

@@ -18,8 +18,8 @@
   height: 4rem;
   margin-bottom: 3.2rem;
   padding: 1rem 2rem;
-  border-radius: .6rem;
-  border: var( --color-border-primary);
+  border-radius: 0.6rem;
+  border: var(--color-border-primary);
   color: var(--color-input-primary);
 }
 
@@ -27,3 +27,24 @@
   outline: var(--color-input-primary);
 }
 
+.user-card {
+  min-height: 40rem;
+  margin-top: 5.4rem;
+  background-color: var(--color-bg-quartnary);
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.user-card img {
+  height: 25rem;
+  width: 25rem;
+  margin: 4.4rem 3rem 4.4rem 3.8rem;
+}
+
+.user-notfound {
+  color: var(--color-font-quartnary);
+  font-weight: 500;
+  font-size: 3.8rem;
+  margin-top: 6.4rem;
+}
