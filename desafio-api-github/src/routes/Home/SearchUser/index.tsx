@@ -65,17 +65,26 @@ export default function SearchUser() {
               </div>
 
               <div className="user-card-sub-content">
-                <h3>Informações</h3>
-
-                <p>
-                  Perfil:
-                  <a href={user.html_url} target="_blank" rel="noreferrer">
-                    {user.html_url}
-                  </a>
-                </p>
-                <p>Seguidores: {user.followers}</p>
+                <div className="use-card-h3">
+                  <h3>Informações</h3>
+                </div>
+                <div className="use-card-p">
+                  <p>
+                    Perfil:
+                    <a href={user.html_url} target="_blank" rel="noreferrer">
+                      {user.html_url}
+                    </a>
+                  </p>
+                </div>
+                <div className="use-card-p">
+                  <p>Seguidores: {user.followers}</p>
+                </div>
+                <div className="use-card-p">
                 <p>Localidade: {user.location}</p>
+                </div>
+                <div className="use-card-p">
                 <p>Nome: {user.name}</p>
+                </div>
               </div>
             </div>
           )}

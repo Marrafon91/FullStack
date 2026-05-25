@@ -47,14 +47,49 @@
   width: 100%;
   max-width: 90.2rem;
   margin-right: 6.7rem;
-  border-radius: .6rem;
-  border:1px solid var(--color-border-primary);
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-border-primary);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card-sub-content p {
+  border-radius: 0.6rem;
+  padding: 0.8rem 1rem;
 }
 
 .user-card-sub-content h3 {
   color: var(--color-font-quintinary);
   font-weight: 500;
   font-size: 2rem;
+}
+
+.use-card-h3 {
+  height: 2.8rem;
+  max-width: 5.34rem;
+  width: 100%;
+  margin: 0.8rem 0 1.9rem 1.4rem;
+}
+
+.use-card-p {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.6rem;
+  max-width: 83.9rem;
+}
+
+.use-card-p a {
+  font-weight: 400;
+  color: #0000ff;
+  padding-left: 0.5rem;
+}
+
+.user-card-sub-content p {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 2rem;
+  border: 1px solid var(--color-border-primary);
 }
 
 .user-notfound {
