@@ -9,7 +9,7 @@
   --color-font-primary: #000;
   --color-font-secondary: #7e7e7e;
   --color-font-tertiary: #fff;
-  --color-font-quartnary: #262626;
+  --color-font-quartnary: 262626;
 }
 
 * {
@@ -35,4 +35,8 @@ html {
   width: 100%;
   max-width: 96rem;
   margin: 0 auto;
+}
+
+.ml-40 {
+ margin-left: 4rem;
 }
