@@ -1,6 +1,6 @@
 import { api } from './api';
-import { type UserDTO } from '../models/user';
+import { type UserDTO } from '../models/UserDTO';
 
-export function findUser() {
-  return api.get<UserDTO>(`/users/${name}`);
+export function findUser(username: string) {
+  return api.get<UserDTO>(`/users/${username}`);
 }

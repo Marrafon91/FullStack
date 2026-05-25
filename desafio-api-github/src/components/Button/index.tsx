@@ -1,21 +1,13 @@
-import { useNavigate } from 'react-router-dom';
 import './style.css';
 
 type Props = {
   text: string;
-  to: string;
 };
 
-export default function Button({ text, to }: Props) {
-  const navigate = useNavigate();
-
-  function handleClick() {
-    navigate(to);
-  }
-
+export default function Button({ text }: Props) {
   return (
-    <div className="button-container ml-40">
-      <button className="btn" type="button" onClick={handleClick}>
+    <div className="button-container">
+      <button className="btn" type="submit">
         {text}
       </button>
     </div>
