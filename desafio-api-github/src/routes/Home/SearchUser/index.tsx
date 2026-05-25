@@ -64,7 +64,7 @@ export default function SearchUser() {
                 <img src={user.avatar_url} alt={user.name} />
               </div>
 
-              <div>
+              <div className="user-card-sub-content">
                 <h3>Informações</h3>
 
                 <p>
