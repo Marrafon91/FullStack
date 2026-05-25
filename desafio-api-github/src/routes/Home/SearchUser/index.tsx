@@ -7,16 +7,20 @@ import { findUser } from '../../../service/github-service';
 export default function SearchUser() {
   const [userName, setUserName] = useState('');
   const [user, setUser] = useState<UserDTO>();
+  const [error, setError] = useState('');
 
   function handleSearch(event) {
     event.preventDefault();
+
+    setError('');
 
     findUser(userName)
       .then((response) => {
         setUser(response.data);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        setUser(undefined);
+        setError('Erro ao buscar usuário');
       });
   }
 
@@ -47,7 +51,7 @@ export default function SearchUser() {
                 <h3>Informações</h3>
                 <p>
                   Perfil:
-                  <a href={user.html_url} target="_blank">
+                  <a href={user.html_url} target="_blank" rel="noreferrer">
                     {user.html_url}
                   </a>
                 </p>
@@ -57,6 +61,8 @@ export default function SearchUser() {
               </div>
             </div>
           )}
+
+          {error && <h2>{error}</h2>}
         </div>
       </section>
     </main>
