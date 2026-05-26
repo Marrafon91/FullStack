@@ -13,7 +13,6 @@ export default function App() {
       <Route path="/search" element={<SearchUser />} />
       </Route>
     </Routes>
-
     </BrowserRouter>
   )
 }
