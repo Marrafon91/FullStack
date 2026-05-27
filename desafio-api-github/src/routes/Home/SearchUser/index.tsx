@@ -80,10 +80,10 @@ export default function SearchUser() {
                   <p>Seguidores: {user.followers}</p>
                 </div>
                 <div className="use-card-p">
-                <p>Localidade: {user.location}</p>
+                  <p>Localidade: {user.location}</p>
                 </div>
                 <div className="use-card-p">
-                <p>Nome: {user.name}</p>
+                  <p>Nome: {user.name}</p>
                 </div>
               </div>
             </div>
