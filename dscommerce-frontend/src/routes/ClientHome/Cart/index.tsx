@@ -1,5 +1,4 @@
 import './style.css';
-import computerImg from '../../../assets/computer.png';
 
 const cart = {
   items: [
