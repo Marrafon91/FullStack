@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as cartService from '../../../services/cart-service';
 import './style.css';
 import { OrderDTO, OrderItemDTO } from '../../../models/order';
@@ -18,15 +18,9 @@ const item2: OrderItemDTO = new OrderItemDTO(
   1200.0,
   'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/5-big.jpg',
 );
-
-const cart: OrderDTO = new OrderDTO();
-
 export default function Cart() {
-  useEffect(() => {
-    cart.items.push(item1);
-    cart.items.push(item2);
-    cartService.saveCart(cart);
-  }, []);
+
+  const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
 
   return (
     <main>
