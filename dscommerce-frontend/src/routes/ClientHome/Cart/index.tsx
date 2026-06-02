@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import * as cartService from '../../../services/cart-service';
 import './style.css';
-import { OrderDTO, OrderItemDTO } from '../../../models/order';
+import { type OrderDTO, OrderItemDTO } from '../../../models/order';
 
 const item1: OrderItemDTO = new OrderItemDTO(
   4,
@@ -19,7 +19,6 @@ const item2: OrderItemDTO = new OrderItemDTO(
   'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/5-big.jpg',
 );
 export default function Cart() {
-
   const [cart, setCart] = useState<OrderDTO>(cartService.getCart());
 
   return (
