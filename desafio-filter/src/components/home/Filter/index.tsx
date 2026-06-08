@@ -6,7 +6,11 @@ type FormData = {
   max?: number;
 };
 
-export default function Filter() {
+type Props = {
+  onFilter: (min?: number, max?: number) => void;
+};
+
+export default function Filter({ onFilter }: Props) {
   const [formData, setFormData] = useState<FormData>({
     min: undefined,
     max: undefined,
@@ -24,9 +28,7 @@ export default function Filter() {
 
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-
-    console.log('Min:', formData.min ?? Number.MIN_VALUE);
-    console.log('Max:', formData.max ?? Number.MAX_VALUE);
+    onFilter(formData.min, formData.max);
   }
 
   return (
