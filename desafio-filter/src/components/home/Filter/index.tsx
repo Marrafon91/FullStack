@@ -40,6 +40,7 @@ export default function Filter({ onFilter }: Props) {
         type="number"
         placeholder="Preço mínimo"
         onChange={handleInputChange}
+        autoComplete="off"
       />
 
       <input
@@ -49,6 +50,7 @@ export default function Filter({ onFilter }: Props) {
         type="number"
         placeholder="Preço máximo"
         onChange={handleInputChange}
+        autoComplete="off"
       />
 
       <button className="ds-filter-btn" type="submit">

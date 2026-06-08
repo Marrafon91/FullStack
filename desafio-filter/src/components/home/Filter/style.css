@@ -17,6 +17,7 @@
   border: 1px solid var(--dfilter-color-border-primary);
   border-radius: 5px;
   padding: 0 10px;
+  color: var(--dfilter-color-font-secondary);
 }
 
 .ds-filter-input:focus {

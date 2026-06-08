@@ -6,8 +6,11 @@
   --dfilter-color-bg-tertiary: #FFF;
 
   --dfilter-color-font-primary: #FFF;
+  --dfilter-color-font-secondary: #6F6F6F;
+  --dfilter-color-font-tertiary: #55BC04;
 
   --dfilter-color-border-primary: #c2c2c2;
+  --dfilter-color-border-secondary: #55BC04;
 
  --dfilter-color-btn-primary: #55BC04;
 }

@@ -7,13 +7,17 @@ type Props = {
 
 export default function Listing({ products }: Props) {
   return (
-    <div>
-      {products.map((product) => (
-        <div key={product.id}>
-          <h3>{product.name}</h3>
-          <p>R$ {product.price}</p>
-        </div>
-      ))}
+    <div className="container ds-listing-content">
+      {products.length === 0 ? (
+        <span>Nenhum produto encontrado</span>
+      ) : (
+        products.map((product) => (
+          <div className="ds-listing-sub-content" key={product.id}>
+            <p>{product.name}</p>
+            <h3>R$ {product.price.toFixed(2)}</h3>
+          </div>
+        ))
+      )}
     </div>
   );
 }
