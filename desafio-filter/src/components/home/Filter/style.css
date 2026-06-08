@@ -1,0 +1,41 @@
+.ds-filter-content {
+  background-color: var(--dfilter-color-bg-tertiary);
+  margin: 20px 0;
+  min-height: 200px;
+  border-radius: 5px;
+  border: 1px solid var(--dfilter-color-border-primary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ds-filter-input {
+  width: 200px;
+  height: 40px;
+  margin: 20px 20px;
+  border: 1px solid var(--dfilter-color-border-primary);
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.ds-filter-input:focus {
+  outline: none;
+}
+
+.ds-filter-btn {
+  background-color: var(--dfilter-color-btn-primary);
+  color: var(--dfilter-color-font-primary);
+  width: 200px;
+  height: 40px;
+  margin: 20px 20px;
+  border: 1px solid var(--dfilter-color-border-primary);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.ds-filter-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}

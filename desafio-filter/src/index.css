@@ -3,9 +3,13 @@
 :root {
   --dfilter-color-bg-primary: #c2c2c2;
   --dfilter-color-bg-secudary: #55BC04;
-
+  --dfilter-color-bg-tertiary: #FFF;
 
   --dfilter-color-font-primary: #FFF;
+
+  --dfilter-color-border-primary: #c2c2c2;
+
+ --dfilter-color-btn-primary: #55BC04;
 }
 
 * {
