@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --dfilter-color-bg-primary: #C2C2C2;
+  --dfilter-color-bg-primary: #c2c2c2;
+  --dfilter-color-bg-secudary: #55BC04;
 
+
+  --dfilter-color-font-primary: #FFF;
 }
 
 * {
@@ -21,4 +24,10 @@ a:hover {
 html,
 body {
   background-color: var(--dfilter-color-bg-primary);
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }

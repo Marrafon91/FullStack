@@ -1,0 +1,14 @@
+.ds-filter-header {
+  background-color: var(--dfilter-color-bg-secudary);
+  color: var(--dfilter-color-font-primary);
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+}
+
+.ds-filter-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
