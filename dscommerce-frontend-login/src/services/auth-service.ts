@@ -1,6 +1,8 @@
+import type { AxiosRequestConfig } from 'axios';
 import QueryString from 'qs';
 import type { CredentialsDTO } from '../models/auth';
 import { CLIENT_ID, CLIENT_SECRET } from '../utils/system';
+import { requestBackend } from '../utils/request';
 
 export function loginRequest(loginData: CredentialsDTO) {
   const headers = {
@@ -12,5 +14,13 @@ export function loginRequest(loginData: CredentialsDTO) {
     ...loginData,
     grant_type: 'password',
   });
-  console.log(requestBody);
+
+  const config: AxiosRequestConfig = {
+    method: 'POST',
+    url: '/oauth/token',
+    data: requestBody,
+    headers,
+  };
+
+  return requestBackend(config);
 }
