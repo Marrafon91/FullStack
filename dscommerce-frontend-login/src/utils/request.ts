@@ -34,10 +34,11 @@ axios.interceptors.response.use(
   },
   function (error) {
     if (error.response.status === 401) {
-      console.log('DEU 401!!!!');
+      authService.logout();
+      window.location.href = '/login';
     }
     if (error.response.status === 403) {
-      console.log('DEU 403!!!!');
+      window.location.href = '/catalog';
     }
     return Promise.reject(error);
   },
