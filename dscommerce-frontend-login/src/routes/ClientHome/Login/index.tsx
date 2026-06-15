@@ -15,7 +15,7 @@ export default function Login() {
       .loginRequest(formData)
       .then((response) => {
         authService.saveAccessToken(response.data.access_token);
-        console.log(response.data);
+        console.log(authService.getAccessTokenPayload()?.user_name);
       })
       .catch((error) => {
         console.log('Erro no login ', error);
@@ -25,7 +25,6 @@ export default function Login() {
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const name = event.target.name;
     const value = event.target.value;
-
     setFormData({ ...formData, [name]: value });
   }
 
