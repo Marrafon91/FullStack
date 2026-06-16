@@ -141,6 +141,12 @@ nav a {
   font-size: 12px;
 }
 
+.dsc-logged-user span {
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .dsc-logged-user a {
   font-weight: 700;
 }
