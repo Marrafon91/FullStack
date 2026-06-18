@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import ProductDetails from './routes/ClientHome/ProductDetails';
+import Confirmation from './routes/ClientHome/Confirmation';
 import ClientHome from './routes/ClientHome';
 import AdminHome from './routes/Admin/AdminHome';
 import Catalog from './routes/ClientHome/Catalog';
@@ -22,7 +23,9 @@ export default function App() {
   );
 
   const [contextTokenPayload, setContextTokenPayload] = useState<
-    AccessTokenPayloadDTO | undefined> (() => authService.isAuthenticated()
+    AccessTokenPayloadDTO | undefined
+  >(() =>
+    authService.isAuthenticated()
       ? authService.getAccessTokenPayload()
       : undefined,
   );
@@ -39,12 +42,10 @@ export default function App() {
             <Route path="/" element={<ClientHome />}>
               <Route index element={<Catalog />} />
               <Route path="catalog" element={<Catalog />} />
-              <Route
-                path="product-details/:productId"
-                element={<ProductDetails />}
-              />
+              <Route path="product-details/:productId" element={<ProductDetails />}/>
               <Route path="cart" element={<Cart />} />
               <Route path="login" element={<Login />} />
+              <Route path="confirmation/:orderId" element={<Confirmation />}/>
             </Route>
             <Route
               path="/admin/"
