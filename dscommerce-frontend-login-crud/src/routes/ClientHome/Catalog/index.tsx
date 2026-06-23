@@ -15,20 +15,20 @@ export default function Catalog() {
 
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
-  const [querryParams, setQuerryParams] = useState<QuerryParams>({
+  const [queryParams, setQuerryParams] = useState<QuerryParams>({
     page: 0,
     name: '',
   });
 
   useEffect(() => {
     productService
-      .findPageRequest(querryParams.page, querryParams.name)
+      .findPageRequest(queryParams.page, queryParams.name)
       .then((response) => {
         const nextPage = response.data.content;
         setProducts(products.concat(nextPage));
         setIsLastPage(response.data.last);
       });
-  }, [querryParams]);
+  }, [queryParams]);
 
   function handleSearch(searchText: string) {
     setProducts([]);
