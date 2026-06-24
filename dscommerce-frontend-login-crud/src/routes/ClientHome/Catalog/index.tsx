@@ -32,11 +32,11 @@ export default function Catalog() {
 
   function handleSearch(searchText: string) {
     setProducts([]);
-    setQuerryParams({ ...querryParams, page: 0, name: searchText });
+    setQuerryParams({ ...queryParams, page: 0, name: searchText });
   }
 
   function handleNextPageClick() {
-    setQuerryParams({ ...querryParams, page: querryParams.page + 1 });
+    setQuerryParams({ ...queryParams, page: queryParams.page + 1 });
   }
 
   return (
