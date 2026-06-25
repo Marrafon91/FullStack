@@ -10,15 +10,36 @@ export default function Login() {
 
   const { setContextTokenPayload } = useContext(ContextToken);
 
-  const [formData, setFormData] = useState<CredentialsDTO>({
-    username: '',
-    password: '',
+  const [formData, setFormData] = useState<any>({
+    username: {
+      value: '',
+      id: 'username',
+      name: 'username',
+      type: 'text',
+      placeholder: 'Email',
+      validation: function (value: string) {
+        return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+          value.toLowerCase(),
+        );
+      },
+      message: 'Favor informar um email válido',
+    },
+    password: {
+      value: '',
+      id: 'password',
+      name: 'password',
+      type: 'password',
+      placeholder: 'Senha',
+    },
   });
 
   function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
     authService
-      .loginRequest(formData)
+      .loginRequest({
+        username: formData.username.value,
+        password: formData.password.value,
+      })
       .then((response) => {
         authService.saveAccessToken(response.data.access_token);
         setContextTokenPayload(authService.getAccessTokenPayload());
@@ -32,7 +53,7 @@ export default function Login() {
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const name = event.target.name;
     const value = event.target.value;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: { ...formData[name], value: value } });
   }
 
   return (
@@ -45,7 +66,7 @@ export default function Login() {
               <div>
                 <input
                   name="username"
-                  value={formData.username}
+                  value={formData.username.value}
                   className="dsc-form-control"
                   type="text"
                   placeholder="Email"
@@ -56,7 +77,7 @@ export default function Login() {
               <div>
                 <input
                   name="password"
-                  value={formData.password}
+                  value={formData.password.value}
                   className="dsc-form-control"
                   type="password"
                   placeholder="Senha"
