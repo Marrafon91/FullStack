@@ -8,7 +8,6 @@ import * as forms from '../../../utils/forms';
 import * as productService from '../../../services/product-service';
 
 export default function ProductForm() {
-
   const params = useParams();
 
   const isEditing = params.productId !== 'create';
@@ -40,9 +39,10 @@ export default function ProductForm() {
   useEffect(() => {
     if (isEditing) {
       productService.findById(Number(params.productId))
-      .then(response => {
-        console.log(response.data);
-      })
+      .then((response) => {
+        const newFormData = forms.updateAll(formData, response.data);
+        setFormData(newFormData);
+      });
     }
   }, []);
 
