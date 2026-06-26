@@ -37,10 +37,7 @@ export default function Login() {
   function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
     authService
-      .loginRequest({
-        username: formData.username.value,
-        password: formData.password.value,
-      })
+      .loginRequest(forms.toValues(formData))
       .then((response) => {
         authService.saveAccessToken(response.data.access_token);
         setContextTokenPayload(authService.getAccessTokenPayload());
@@ -64,7 +61,7 @@ export default function Login() {
             <div className="dsc-form-controls-container">
               <div>
                 <FormInput
-                  { ...formData.username }
+                  {...formData.username}
                   className="dsc-form-control"
                   onChange={handleInputChange}
                 />
@@ -72,7 +69,7 @@ export default function Login() {
               </div>
               <div>
                 <FormInput
-                  { ...formData.password }
+                  {...formData.password}
                   className="dsc-form-control"
                   onChange={handleInputChange}
                 />
