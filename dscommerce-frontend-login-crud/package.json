@@ -15,7 +15,8 @@
     "qs": "^6.15.2",
     "react": "19",
     "react-dom": "19",
-    "react-router-dom": "^7.15.1"
+    "react-router-dom": "^7.15.1",
+    "react-select": "^5.10.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
