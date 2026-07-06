@@ -6,6 +6,6 @@ type Props = {
 
 export default function ButtonInverse({text}: Props) {
   return (
-    <div className="dsc-btn dsc-btn-white">{text}</div>
+    <button type="submit" className="dsc-btn dsc-btn-white">{text}</button>
   );
 }
