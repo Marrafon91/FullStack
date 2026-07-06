@@ -1,5 +1,5 @@
 import './style.css';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ButtonInverse from '../../../components/ButtonInverse';
 import ButtonPrimary from '../../../components/ButtonPrimary';
@@ -14,6 +14,8 @@ import { selectSyle } from '../../../utils/select';
 
 export default function ProductForm() {
   const params = useParams();
+
+  const navigate = useNavigate();
 
   const isEditing = params.productId !== 'create';
 
@@ -106,7 +108,16 @@ export default function ProductForm() {
       setFormData(formDataValidated);
       return;
     }
-    // console.log(forms.toValues(formData));
+
+    const requestBody = forms.toValues(formData);
+    if (isEditing) {
+      requestBody.id = params.productId;
+    }
+
+    productService.updateRequest(requestBody)
+    .then(() => {
+      navigate("/admin/products")
+    })
   }
 
   return (
