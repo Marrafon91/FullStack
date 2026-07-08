@@ -72,7 +72,7 @@ export function hasAnyRole(roles: RoleEnum[]): boolean {
         return true;
       }
     }
-    //return roles.some(role => tokenData.authorities.includes(role)); function de Alta ordem para testar as roles.
+    // return roles.some(role => tokenData.authorities.includes(role)); function de Alta ordem para testar as roles.
   }
   return false;
 }

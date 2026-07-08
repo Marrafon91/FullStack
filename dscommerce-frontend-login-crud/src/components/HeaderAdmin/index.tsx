@@ -8,7 +8,9 @@ export default function HeaderAdmin() {
   return (
     <header className="dsc-header-admin">
       <nav className="dsc-container">
-        <h1>DSC Admin</h1>
+        <NavLink to="/admin/home">
+          <h1>DSC Admin</h1>
+        </NavLink>
         <div className="dsc-navbar-right">
           <div className="dsc-menu-items-container">
             <NavLink className={({ isActive }) => isActive ? "dsc-menu-item-active" : ""} to="/admin/home">
